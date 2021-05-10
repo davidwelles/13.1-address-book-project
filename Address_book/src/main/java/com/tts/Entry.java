@@ -1,10 +1,22 @@
 package com.tts;
 
+
 public class Entry {
     private String fName;
     private String lName;
     private String email;
     private String phoneNum;
+
+
+    public Entry(String fName, String lName, String email, String phoneNum){
+        this.fName = fName;
+        this.lName = lName;
+        this.email = email;
+        this.phoneNum = phoneNum;
+    }
+    public Entry() {}
+
+
 
     public String getfName() {
         return fName;
@@ -40,11 +52,11 @@ public class Entry {
 
     @Override
     public String toString() {
-        return "Entry{" +
-                "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
+        return "Contact Info{" + '\n' +
+                "First Name:" + fName + '\n' +
+                "Last Name:" + lName + '\n' +
+                "Email:" + email + '\n' +
+                "Phone Number:" + phoneNum + '\n' +
                 '}';
     }
 }
