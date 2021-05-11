@@ -18,16 +18,15 @@ public class AddressBook {
     }
 
     public void delete(String email) {
-        //List.remove(int index) removes a object at the given index
-
+    // deletes list entry by email
         listOfEntries.removeIf(e->e.getEmail().equalsIgnoreCase(email));
 
         }
-//
+
 
 
     public void look(String email) {
-        //List.get(int index) returns the object at the given index
+       // looks up list entry by email
         this.listOfEntries.stream()
                 .filter(e->e.getEmail()
                         .equalsIgnoreCase(email))
