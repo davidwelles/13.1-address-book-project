@@ -43,6 +43,10 @@ public class Main extends Entry {
 
             } else if (entryInput == 3) {
                 // Search for an entry
+                System.out.println("Enter email: \n");
+                String search = sc.next();
+                newAddy.look(search);
+
 
 
             } else if (entryInput == 4) {
@@ -56,7 +60,7 @@ public class Main extends Entry {
             } else if (entryInput == 5) {
                 //Deleting the address book
 
-                newAddy = null;
+                newAddy.deleteAll();
                 System.out.println("Address book has been successfully cleared.");
 
             } else if(entryInput > 6 | entryInput < 1){

@@ -26,9 +26,9 @@ public class AddressBook {
 //
 
 
-    public Entry get(int index) {
+    public void look(String email) {
         //List.get(int index) returns the object at the given index
-        return this.listOfEntries.get(index);
+        this.listOfEntries.stream().filter(e->e.getEmail().equals(email)).forEach(System.out::println);
     }
 
     public Entry[] viewAll() {
@@ -40,5 +40,8 @@ public class AddressBook {
 
         //return the filled array
         return result;
+    }
+    public void deleteAll(){
+        this.listOfEntries.removeAll(listOfEntries);
     }
 }
