@@ -37,8 +37,9 @@ public class Main extends Entry {
 
             } else if (entryInput == 2) {
                 // Remove an entry
-
-                newAddy.delete(sc.nextInt());
+                System.out.println("Enter email: \n");
+                String input = sc.next();
+                newAddy.delete(input);
 
             } else if (entryInput == 3) {
                 // Search for an entry
